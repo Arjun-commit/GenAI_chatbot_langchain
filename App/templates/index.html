@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LangGraph Chatbot Agent</title>
+    <title>GenAI Chatbot Agent</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>LangGraph Chatbot Agent</h1>
-        <p>Interact with the LangGraph-based agent using this interface.</p>
+        <h1>GenAI Chatbot</h1>
+        <p>Interact with the agent using this interface.</p>
 
         <label for="system-prompt">Define your AI Agent:</label>
-        <textarea id="system-prompt" rows="2" placeholder="Type your system prompt here..."></textarea>
+        <div class="info-container">
+            <textarea id="system-prompt" rows="2" placeholder="Type your system prompt here..."></textarea>
+            <button class="info-button" data-info="Define the behavior and personality of the AI agent.">i</button>
+        </div>
 
         <label for="model-select">Select Model:</label>
         <select id="model-select">

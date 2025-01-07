@@ -44,8 +44,8 @@ GenAI_chatbot_langchain/
 ├── static/               # Static files (CSS, JS)
 ├── templates/            # HTML templates
 ├── frontend/             # Frontend code (React or other framework)
-├── README.md             # Documentation
-└── demo/                 # Screenshots or demo files
+|__ README.md             # Documentation
+
 
 
 ## 📖 Usage

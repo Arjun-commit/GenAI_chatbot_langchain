@@ -37,7 +37,7 @@ This project is a Generative AI-powered chatbot built with LangChain, designed t
     python -m uvicorn App.main:app --reload
 
 
-🖼️ Directory Structure
+## 🖼️ Directory Structure
 GenAI_chatbot_langchain/
 ├── app.py                # Backend application entry point
 ├── requirements.txt      # Python dependencies
@@ -48,7 +48,7 @@ GenAI_chatbot_langchain/
 └── demo/                 # Screenshots or demo files
 
 
-📖 Usage
+## 📖 Usage
 Define Your AI Agent:
 
 Enter a system prompt to customize the chatbot's personality and behavior.
@@ -63,7 +63,7 @@ Wait for the Response:
 A response will be generated and displayed in the interface.
 
 
-⚡ API Reference
+## ⚡ API Reference
 The backend provides an API endpoint for interacting with the chatbot.
 
 POST /chat
@@ -91,7 +91,7 @@ Response:
 }
 
 
-🛠️ Contributing
+## 🛠️ Contributing
 Contributions are welcome! Follow these steps to contribute:
 
 1. 
@@ -107,5 +107,5 @@ git commit -m "Add new feature"
 Push to your branch and create a pull request.
 
 
-💬 Support
+## 💬 Support
 If you encounter any issues or have suggestions, feel free to open an issue in this repository.

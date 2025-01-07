@@ -1,11 +1,15 @@
 # Import necessary modules and setup for FastAPI, LangGraph, and LangChain
-from fastapi import FastAPI  # FastAPI framework for creating the web application
+from fastapi import FastAPI, Request   # FastAPI framework for creating the web application
 from pydantic import BaseModel  # BaseModel for structured data data models
 from typing import List  # List type hint for type annotations
 from langchain_community.tools.tavily_search import TavilySearchResults  # TavilySearchResults tool for handling search results from Tavily
 import os  # os module for environment variable handling
 from langgraph.prebuilt import create_react_agent  # Function to create a ReAct agent
 from langchain_groq import ChatGroq  # ChatGroq class for interacting with LLMs
+
+from fastapi.templating import Jinja2Templates  # Jinja2 for templates
+from pathlib import Path  # To resolve the template path
+from fastapi.staticfiles import StaticFiles
 
 
 # Retrieve and set API keys for external tools and services
@@ -59,6 +63,15 @@ def chat_endpoint(request: RequestState):
 
     # Return the result as the response
     return result
+
+app.mount("/static", StaticFiles(directory="App/static"), name="static")
+
+templates = Jinja2Templates(directory="App/templates")
+
+# Define route to serve the UI (index.html)
+@app.get("/ui")
+def get_ui(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 # Run the application if executed as the main script
 if __name__ == '__main__':

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangGraph Chatbot Agent</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LangGraph Chatbot Agent</h1>
+        <p>Interact with the LangGraph-based agent using this interface.</p>
+
+        <label for="system-prompt">Define your AI Agent:</label>
+        <textarea id="system-prompt" rows="2" placeholder="Type your system prompt here..."></textarea>
+
+        <label for="model-select">Select Model:</label>
+        <select id="model-select">
+            <option value="llama3-70b-8192">llama3-70b-8192</option>
+            <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+        </select>
+
+        <label for="user-input">Enter your message(s):</label>
+        <textarea id="user-input" rows="6" placeholder="Type your message here..."></textarea>
+
+        <button id="submit-button">Submit</button>
+
+        <div id="response-container"></div>
+    </div>
+
+<script src="static/app.js"></script>
+    
+</body>
+</html>
